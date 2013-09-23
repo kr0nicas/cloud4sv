@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="es">
 	<head>
 			<meta charset="utf-8">
 			<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,6 +44,8 @@
           ga('send', 'pageview');
 
        </script>
+
+
 	</head>
 
 	<body>
@@ -86,7 +88,7 @@
   <section id="intro">
     <div class="slogan">
       <div class="icon">
-        
+
       </div>
       <i class="icon-cloud-download icon-4x"></i>
       <h1>Bienvenido a <span>Cloud4sv</span> El Salvador</h1>
@@ -114,26 +116,16 @@
           <div class="span6">
             <i class="icon-group icon-4x"></i>
             <div class="heading"><h2>Misión</h2></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Satisfacer las  necesidades y expectativas de nuestros clientes, suministrándoles soluciones integrales y de vanguardia con la más avanzada tecnología, en todos los campos, garantizando su eficacia en el tiempo para mantenernos como lideres en servicio.</p>
           </div>
           <div class="span6">
             <i class="icon-shield icon-4x"></i>
             <div class="heading"><h2>Visión</h2></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            <p>Ser una empresa de tecnológica líder y en continuo crecimiento, con presencia multinacional, que se distinga por proporcionar una calidad de servicio excelente a nuestros clientes, además de ofrecer oportunidades de desarrollo profesional y personal a sus empleados y una contribución positiva a la sociedad actuando con un compromiso de ciudadanía global. </p>
           </div>
 
         </div>
-        
+
       </div>
     </section>
     <!-- end section about us -->
@@ -381,15 +373,15 @@
                 Dejanos tu sugerencias, dudas y permitenos ponernos en contacto contigo!
               </p>
             </div>
-             <form class="well span12">
+             <form id="myForm" action="enviarCorreo.php" method="post" class="well span12">
               <div class="row">
                 <div class="span4">
                   <label>Nombre</label>
-                  <input type="text" class="span3" placeholder="Escribe tu Nombre">
+                  <input name="name" id="name" type="text" class="span3" placeholder="Escribe tu Nombre">
                   <label>Apellido</label>
-                  <input type="text" class="span3" placeholder="Escribe tu Apellido">
+                  <input name="last_name"id ="last_name" type="text" class="span3" placeholder="Escribe tu Apellido">
                   <label>Correo Electronico</label>
-                  <input type="text" class="span3" placeholder="Escribe tu correo electronico">
+                  <input name= "email" id="email" type="text" class="span3" placeholder="Escribe tu correo electronico">
                         <label>Subject</label>
                   <select id="subject" name="subject" class="span3">
                     <option value="na" selected="">Choose One:</option>
@@ -403,12 +395,15 @@
                   <textarea name="message" id="message" class="input-xlarge span5" rows="9" placeholder="Escribe tu mensaje"></textarea>
                 </div>
 
-                <div class="span5"><button type="submit" class="btn btn-primary pull-right">Enviar</button></div>
+                <div class="span5"><button name ="submit" id="submit_button" type="submit" class="btn btn-primary pull-right">Enviar</button><div class="span2">  <img id="captcha" src="securimage/securimage_show.php" alt="CAPTCHA Image" />
+                  <input type="text" name="captcha_code" size="6" maxlength="6" /><a href="#" onclick="document.getElementById('captcha').src = '/securimage/securimage_show.php?' + Math.random(); return false">[ Different Image ]</a>
+                </div></div>
               </div>
+
             </form>
           </div>
         </div>
-      </div>  
+      </div>
    </section>
       <!-- end contac section -->
   <footer>
@@ -425,9 +420,9 @@
     </div>
   </footer>
 <a href="#" class="scrollup"><i class="icon-chevron-up icon-square icon-48 active"></i></a>
- 
-  
-   
+
+
+
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -451,6 +446,8 @@
     <script src="assets/js/portafolio/jquery.quicksand.js"></script>
     <script src="assets/js/portafolio/setting.js"></script>
     <script src="assets/js/parallax/jquery.parallax-1.1.3.js"></script>
+    <script src="assets/js/tools-site.js"></script>
+    <script src="assets/js/pace.js"></script>
 
     <script>
       $(document).ready(function(){
@@ -474,6 +471,8 @@
 
 
       }); // end document.ready
+
+
     </script>
 	</body>
 </html>
